@@ -35,7 +35,7 @@
 
 /* Private define ------------------------------------------------------------*/
 /* USER CODE BEGIN PD */
-
+#define CT_1000N_ADDR 0x01
 /* USER CODE END PD */
 
 /* Private macro -------------------------------------------------------------*/
@@ -95,11 +95,11 @@ int main(void)
   uint8_t txData[8];
   uint8_t rxData[30];
 
-  for (int i = 0; i < 256; i++) {
-	  printf("TESTING ADDRESS: %d\r\n", i);
-	  MODBUS_MASTER_TRANSMIT(i, 0x03, 0x94C0, 1, txData);
-	  MODBUS_MASTER_RECEIVE(rxData);
-  }
+  printf("BEGINNING TRANSMISSION... \r\n");
+  MODBUS_MASTER_TRANSMIT(CT_1000N_ADDR, 0x03, 0x94C0, 1, txData);
+  MODBUS_MASTER_RECEIVE(rxData);
+  printf("THE FUNCTION CODE IS: %d\r\n", rxData[0]);
+
   /* USER CODE END 2 */
 
   /* Infinite loop */
