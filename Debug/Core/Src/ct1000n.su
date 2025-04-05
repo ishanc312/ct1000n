@@ -1,0 +1,2 @@
+../Core/Src/ct1000n.c:13:6:sendData	16	static
+../Core/Src/ct1000n.c:80:10:computeCRC16	24	static
