@@ -1,0 +1,1 @@
+Simple driver to interface with the Diwell Electronics CT-1000N Brake Temperature Sensor. It utilizes the Modbus-RTU Protocol, taking in an RS485 input; this was written for a Nucleo L432KCU3 (with the USART peripheral connected to an RS485 Transceiver) as part of the DAQ Units for the Bruin Formula Mk. 10 Vehicle.
